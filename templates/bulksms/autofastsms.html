@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row formpg">
+    <div class="col-lg-6 partone">
+    <h5>Welcome to AutoFast send SMS</h5>
+      <table class="table table-borderless mytable">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <tbody>
+          <tr>
+            <td>{{form.description}}</td>
+          </tr>
+          <tr>
+            <td class="msg" name="message" >{{form.message}}<br>
+              <span id=charcount></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="formgrp">
+                <input type="file" title="Upload excel file" name="excel_file" required="required">
+            </td>
+          </tr>
+          <tr>
+            <td class="formgrp">
+                <input type="submit" onclick="confirmMsg()" class="smsbtn" value="Send SMS">
+            </td>
+          </tr>
+        </tbody>
+        </form>
+      </table>
+    </div>
+    <div class="col-lg-6 parttwo">
+      <table class="table table-borderless">
+        <tr>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Message count</th>
+          <th>Customer count</th>
+        </tr>
+        {% for text in texts %}
+        <tr>
+          <td>{{text.description}}</td>
+          <td>{{text.date}}</td>
+          <td>{{text.msgcount}}</td>
+          <td>{{text.custcount}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <div class="click"><a href="{% url 'autofaststat' %}">Click to view more.</a></div>
+    </div>
+  </div>
+{% endblock %}

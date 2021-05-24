@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class=" row contsetting">
+    <div class="card">
+        {% load static %}
+      <a href="{% url 'automarksms' %}" >
+      <img class="card-img-top" src="{% static 'automark.jpg' %}" alt="Card image" style="width:100%">
+      </a>
+      <div class="card-body d-flex">
+        <a href="{% url 'automarksms' %}" class="btn btn-primary smsbtn mx-auto">SMS</a>
+      </div>
+    </div>
+    <div class="card">
+        {% load static %}
+        <a href="{% url 'autofastsms' %}">
+        <img class="card-img-top" src="{% static 'autofast.jpg' %}" alt="Card image" style="width:100%">
+        </a>
+        <div class="card-body d-flex">
+          <a href="{% url 'autofastsms' %}" class="btn btn-primary smsbtn mx-auto">SMS</a>
+        </div>
+    </div>
+    <div class="card">
+        {% load static %}
+        <a href="{% url 'winpartsms' %}" >
+        <img class="card-img-top" src="{% static 'winpart.jpg' %}" alt="Card image" style="width:100%">
+        </a>
+        <div class="card-body d-flex">
+          <a href="{% url 'winpartsms' %}" class="btn btn-primary smsbtn mx-auto">SMS</a>
+        </div>
+    </div>
+    <div class="card">
+      {% load static %}
+        <a href="{% url 'autofasttotal' %}">
+        <img class="card-img-top" src="{% static 'totalautofast.jpg' %}" alt="Card image" style="width:100%">
+        </a>
+        <div class="card-body d-flex">
+          <a href="{% url 'autofasttotal' %}" class="btn btn-primary smsbtn mx-auto">SMS</a>
+        </div>
+    </div>
+    <div class="card">
+      {% load static %}
+        <a href="{% url 'corpsms' %}">
+        <img class="card-img-top" src="{% static 'tamklogo.png' %}" alt="Card image" style="width:100%">
+        </a>
+        <div class="card-body d-flex">
+          <a href="{% url 'corpsms' %}" class="btn btn-primary smsbtn mx-auto">SMS</a>
+        </div>
+    </div>
+  </div>
+    <div class="msgconfirm text-center">
+      {% for message in messages %}
+        <p>{{message}}</p> 
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

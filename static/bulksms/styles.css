@@ -1,0 +1,366 @@
+/*Styling for base html*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+  height: 700px;
+  min-height: 700px;
+}
+
+.content{
+  padding: 3rem;
+}
+    
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #00A6DE;
+  height: 100%;
+  max-height: 100%;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}
+
+/*Background*/
+.background {
+  background-color: #00A6DE;
+}
+
+.mainpage{
+  background-color: #ffffff;
+  height: 100%;
+}
+
+/*Styling for home page*/
+
+.card{
+  width:17rem;
+  height:13rem;
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.card-img-top{
+  height: 6rem;
+  width: 4rem;
+  padding: 1rem;
+}
+
+.smsbtn{
+  width: 10rem;
+  background-color:#00A6DE;
+  color: #ffffff;
+  border-width: 0;
+  height: 1.8rem;
+}
+
+.logoimg{
+  margin-top: 1rem;
+}
+
+.hello{
+  margin-top: 1rem;
+  padding: 6px 8px 24px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  padding: 6px 8px 20px 16px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #ffffff;
+  display: block;
+}
+
+.dropdown a:hover {font-size: 36px;}
+
+/*Styling for form pages*/
+
+.partone{
+  height: 100%;
+}
+
+.parttwo{
+  height: 100%;
+}
+
+.formpg{
+  margin-top: 1rem;
+}
+
+.msg{
+  max-height: 19rem;
+}
+
+.click{
+  margin-left: 1rem;
+}
+
+h5{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  color: #0057A6;
+}
+
+
+/*Styling for login and register pages*/
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  height: 30rem;
+  width: 28rem;
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #0057A6;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group1 {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+}
+.form-label-group1>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+.form-label-group1>label {
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #0057A6;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: 3rem;
+  border-radius: 2rem;
+  width: 16rem;
+  margin-left: 4rem;
+  text-align: center;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 4rem;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #0057A6;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 16px;
+  color: #777;
+}
+
+
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+/* Logout pages */
+
+.logoutpage{
+  margin: 4rem 2rem 4rem 2rem;
+}
+
+.logoutimg{
+  width: 100%;
+  margin-top: 5rem;
+  height: 20rem;
+  max-height: 20rem;
+}
+
+.logouttxt{
+  margin-top: 10rem;
+  padding: 5rem;
+  background-color: #00A6DE;
+  height: 20rem;
+  max-height: 20rem;
+}
+
+.loginurl{
+  color:#ffffff;
+  font-size: 2.5vw;
+}
+
+.txt{
+  color: #ffffff;
+  font-size: 2vw;
+}
+
+/* Styling for password reset pages*/
+
+.pwdbkgrnd{
+  height: 100%;
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+  height: 30rem;
+  width: 20rem;
+}
+
+.pwdbkgrnd-one{
+  background-color: #00A6DE;
+  margin-top: 7rem;
+  border-radius: 1rem;
+  height: 25rem;
+  width: 20rem;
+}
+
+.pwdbkgrnd-two{
+  background-color: #00A6DE;
+  margin-top: 7rem;
+  border-radius: 1rem;
+  height: 30rem;
+  width: 20rem;
+}
+
+
+.frmpwd{
+  margin-left: 1rem;
+}
+
+.pwrdbtn{
+  background-color: #0057A6;
+  color: #c7ffd8;
+}
+
+.pwdurl{
+  color: #ffffff;
+  font-size: 2vw;
+}
+
+.message{
+  color: #0057A6;
+}
+
+.msgconfirm{
+  color: #0057A6;
+  font-size: 24px;
+  margin-top: 1rem;
+}
+
+.contsetting{
+  justify-content: center;
+}
+
+
+/* Styling for tables*/
+table{
+  margin-left: 1rem;
+}

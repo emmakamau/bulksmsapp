@@ -21,13 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')2w!p-g+i#pcsm5-e+m5n1e#osval%ha&uxs+ec4b7fq*g4-kx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mybulksms.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,13 +120,13 @@ USE_L10N = True
 USE_TZ = True
 
 #Email handling
-DEFAULT_FROM_EMAIL = 'emmasoftdev@gmail.com'
+DEFAULT_FROM_EMAIL = ''
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'emmasoftdev@gmail.com'
-EMAIL_HOST_PASSWORD = 'tpzdjnynggluamji'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
